@@ -7,14 +7,14 @@ function App() {
   let [students, setStudents] = useState([]);
 
   let getCities = async () => {
-    let response = await axios.get("http://localhost:1234/citiesOfIndia");
+    let response = await axios.get("/citiesOfIndia");
 
     setCities(response.data);
     console.log(response);
   };
 
   let getUsersFromAtlas = async () => {
-    let response = await axios.get("http://localhost:1234/getUsers");
+    let response = await axios.get("/getUsers");
 
     setStudents(response.data);
 
